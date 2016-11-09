@@ -1,0 +1,1 @@
+запуск - rails s -b 188.166.111.118 -e development -p 5000

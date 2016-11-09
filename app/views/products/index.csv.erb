@@ -1,0 +1,47 @@
+<% headers = ['id', 'title','shortdesc', 'fulldesc', 'picture', 'sku', 'sv_razmer', 'cost-price', 'price', 'quantity', 'weight', 'Param-Colection', 'Param-Metall', 'Param-Vstavka','Param-Proba', 'Param-Vid',  'kornevay'] %>
+<%= CSV.generate_line headers %>
+<% @allproducts.each do |pr| %>
+<% id = pr.id%>
+    <% if pr.vstavka.present?%>
+    <% title = pr.title + " вставка " + pr.vstavka.mb_chars.downcase.to_s if pr.title !=nil%>
+    <%else%>
+    <% title = pr.title %>
+    <%end%>
+<% shortdesc = pr.category%>
+<% fulldesc = "#{title}"+ ". Золото "+ pr.proba+" пробы "+pr.metalcolor.mb_chars.downcase.to_s+". Средний вес "+"#{pr.weight}"+" гр." if pr.metalcolor !=nil%>
+<% picture = "ftp://foto:f2874740@89.253.253.89/" + pr.foto%>
+<% sku = pr.sku%>
+<% sv_razmer = pr.size%>
+	<% if !pr.price.nil?%>
+	<% cost_price = pr.price-500 %>
+	<%else%>
+	<% cost_price = 0 %>
+	<%end%>
+	<% if !pr.price.nil?%>
+	<% price = pr.price%>
+	<%else%>
+	<% price = 0 %>
+	<%end%>
+<% quantity = pr.quantity%>
+<% weight = pr.weight%>
+<% param_colection = pr.collection%>
+<% param_metall = pr.metalcolor%>
+<% param_vstavka = pr.vstavka%>
+<% param_proba =pr.proba%>
+<% param_vid =pr.category%>
+<% if pr.title == "Кольцо"%>
+<% kornevay = "Кольца" %>
+<%end%>
+<% if pr.title == 'Серьги'%>
+<% kornevay = "Серьги" %>
+<%end%>
+<% if pr.title == 'Подвеска'%>
+<% kornevay = "Подвески" %>
+<%end%>
+<% if pr.title == 'Цепь'%>
+<% kornevay = "Цепочки" %>
+<% end %>
+<% if pr.title == 'Браслет'%>
+<% kornevay = "Браслеты" %>
+<% end %>
+<%= CSV.generate_line([id, title, shortdesc, fulldesc, picture, sku, sv_razmer, cost_price, price, quantity, weight, param_colection, param_metall, param_vstavka, param_proba, param_vid, kornevay  ])  %><% end %>

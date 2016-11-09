@@ -1,0 +1,42 @@
+<% if pr.title == "Кольцо" %>
+   <% if pr.category == "Женские" %>
+      <% if pr.vstavka != nil%>
+      <% title = pr.title + " женское " + pr.metalcolor.mb_chars.downcase.to_s + " вставка " + pr.vstavka.mb_chars.downcase.to_s%>
+      <%else%>
+      <% title = pr.title + " женское "+ pr.metalcolor.mb_chars.downcase.to_s if pr.metalcolor !=nil%>
+      <%end%>
+   <% else %>
+   <% if pr.category == "Мужские" %>
+      <% if pr.vstavka != nil%>
+      <% title = pr.title + " мужское " + pr.metalcolor.mb_chars.downcase.to_s + " вставка " + pr.vstavka.mb_chars.downcase.to_s%>
+      <%else%>
+      <% title = pr.title + " мужское "+ pr.metalcolor.mb_chars.downcase.to_s if pr.metalcolor !=nil%>
+      <%end%>
+   <%else%>
+   <% if pr.category == "Каучуковые" %>
+      <% if pr.vstavka != nil%>
+      <% title = pr.title + " каучуковое " + pr.metalcolor.mb_chars.downcase.to_s + " вставка " + pr.vstavka.mb_chars.downcase.to_s%>
+      <%else%>
+      <% title = pr.title + " каучуковое "+ pr.metalcolor.mb_chars.downcase.to_s if pr.metalcolor !=nil%>
+      <%end%>
+   <%else%>
+   <% if pr.category == "Обручальные" %>
+      <% if pr.vstavka != nil%>
+      <% title = pr.title + " обручальное " + pr.metalcolor.mb_chars.downcase.to_s + " вставка " + pr.vstavka.mb_chars.downcase.to_s%>
+      <%else%>
+      <% title = pr.title + " обручальное "+ pr.metalcolor.mb_chars.downcase.to_s if pr.metalcolor !=nil%>
+      <%end%>
+      <%else%>
+   <% if pr.category == "Религиозное" %>
+      <% if pr.vstavka != nil%>
+      <% title = pr.title + " религиозное " + pr.metalcolor.mb_chars.downcase.to_s + " вставка " + pr.vstavka.mb_chars.downcase.to_s%>
+      <%else%>
+      <% title = pr.title + " религиозное "+ pr.metalcolor.mb_chars.downcase.to_s if pr.metalcolor !=nil%>
+      <%end%>
+    <% end %>
+    <% end %>
+    <% end %>
+    <% end %>
+    <% end %>
+<% end %>
+

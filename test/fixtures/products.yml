@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  foto: MyString
+  sku: MyString
+  collection: MyString
+  complect: MyString
+  proba: MyString
+  title: MyString
+  category: MyString
+  shortdesc: MyString
+  gruppa: MyString
+  vstavka: MyString
+  metalcolor: MyString
+  size: 1
+  price: 9.99
+  quantity: 1
+  weight: 1
+
+two:
+  foto: MyString
+  sku: MyString
+  collection: MyString
+  complect: MyString
+  proba: MyString
+  title: MyString
+  category: MyString
+  shortdesc: MyString
+  gruppa: MyString
+  vstavka: MyString
+  metalcolor: MyString
+  size: 1
+  price: 9.99
+  quantity: 1
+  weight: 1

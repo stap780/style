@@ -1,0 +1,2 @@
+json.extract! product, :id, :foto, :sku, :collection, :complect, :proba, :title, :category, :shortdesc, :gruppa, :vstavka, :metalcolor, :size, :price, :quantity, :weight, :created_at, :updated_at
+json.url product_url(product, format: :json)

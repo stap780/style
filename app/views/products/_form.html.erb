@@ -1,0 +1,75 @@
+<div class="col-md-12">
+<%= simple_form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <%= f.input :foto %>
+  <div class="field">
+    <%= f.label :sku %><br>
+    <%= f.text_field :sku %>
+  </div>
+  <div class="field">
+    <%= f.label :collection %><br>
+    <%= f.text_field :collection %>
+  </div>
+  <div class="field">
+    <%= f.label :complect %><br>
+    <%= f.text_field :complect %>
+  </div>
+  <div class="field">
+    <%= f.label :proba %><br>
+    <%= f.text_field :proba %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :shortdesc %><br>
+    <%= f.text_field :shortdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :gruppa %><br>
+    <%= f.text_field :gruppa %>
+  </div>
+  <div class="field">
+    <%= f.label :vstavka %><br>
+    <%= f.text_field :vstavka %>
+  </div>
+  <div class="field">
+    <%= f.label :metalcolor %><br>
+    <%= f.text_field :metalcolor %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.number_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.number_field :weight %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
